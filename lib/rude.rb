@@ -1,23 +1,18 @@
 require "rude/version"
 
+DEFAULT_RUDE_WORDS = [
+  'cunt', 'twat', 'shit'
+]
+
+class String
+  def rude?
+    Rude.is?(self)
+  end
+end
+
+
 module Rude
-
-  DEFAULT_RUDE_WORDS = [
-    'cunt', 'twat', 'shit'
-  ]
-
-  # class String
-  #   def rude?
-  #     self.split(' ').each do |t|
-  #       if DEFAULT_RUDE_WORDS.member?(t.downcase)
-  #         return true
-  #       end
-  #     end
-  #     return false
-  #   end
-  # end
-
-  def self.rude?(text)
+  def self.is?(text)
     text.split(' ').each do |t|
       if DEFAULT_RUDE_WORDS.member?(t.downcase)
         return true
@@ -25,5 +20,4 @@ module Rude
     end
     return false
   end
-
 end
