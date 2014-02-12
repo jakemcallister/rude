@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jake69mac@gmail.com"]
   spec.description   = %q{Rude is a gem which tells you if a block of text includes any rude words}
   spec.summary       = %q{}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/jake69mac/rude"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
